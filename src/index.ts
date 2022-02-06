@@ -1,15 +1,15 @@
 /**
  * @description Official source identifier by lavalink itself
  */
-export type LavalinkSearchIdentifier = "ytsearch" | "ytmsearch" | "scsearch";
+export type LavalinkSearchIdentifier = 'ytsearch' | 'ytmsearch' | 'scsearch';
 
 /**
  * @description Official source identifier by lavalink itself
  */
 export enum LavalinkSearchIdentifierEnum {
-	  YT_SEARCH = "ytsearch",
-	  YTM_SEARCH = "ytmsearch",
-	  SC_SEARCH = "scsearch"
+	YT_SEARCH = 'ytsearch',
+	YTM_SEARCH = 'ytmsearch',
+	SC_SEARCH = 'scsearch'
 }
 
 /**
@@ -324,19 +324,19 @@ export interface LowPassEqualizer {
 /**
  * @description Routeplanner class.
  */
-export type RoutePlannerClass = "RotatingNanoIpRoutePlanner";
+export type RoutePlannerClass = 'RotatingNanoIpRoutePlanner';
 
 /**
  * @description Routeplanner class.
  */
 export enum RoutePlannerClassEnum {
-	ROTATING_NANO_IP_ROUTE_PLANNER = "RotatingNanoIpRoutePlanner"
+	ROTATING_NANO_IP_ROUTE_PLANNER = 'RotatingNanoIpRoutePlanner'
 }
 
 /**
  * @description IpBlockType.
  */
-export type IpBlockType = "Inet6Address" | "Inet4Address";
+export type IpBlockType = 'Inet6Address' | 'Inet4Address';
 
 /**
  * @description RouteplannerStatus sent by lavalink.
@@ -347,7 +347,7 @@ export interface RoutePlannerStatusResponse {
 		ipBlock: {
 			type: IpBlockType;
 			size: number;
-		},
+		};
 		failingAddresses: {
 			address: string;
 			failingTimestamp: number;
@@ -355,5 +355,5 @@ export interface RoutePlannerStatusResponse {
 		}[];
 		blockIndex: number;
 		currentAddressIndex: string;
-	}
+	};
 }
