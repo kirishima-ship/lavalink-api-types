@@ -1,5 +1,25 @@
+/**
+ * @description Official source identifier by lavalink itself
+ */
+export type LavalinkSearchIdentifier = "ytsearch" | "ytmsearch" | "scsearch";
+
+/**
+ * @description Official source identifier by lavalink itself
+ */
+export enum LavalinkSearchIdentifierEnum {
+	  YT_SEARCH = "ytsearch",
+	  YTM_SEARCH = "ytmsearch",
+	  SC_SEARCH = "scsearch"
+}
+
+/**
+ * @description Official source supported by lavalink itself.
+ */
 export type LavalinkSource = 'youtube' | 'soundcloud' | 'bandcamp' | 'local' | 'vimeo' | 'twitch' | string;
 
+/**
+ * @description Official source supported by lavalink itself.
+ */
 export enum LavalinkSourceEnum {
 	Youtube = 'youtube',
 	Soundcloud = 'soundcloud',
@@ -94,7 +114,7 @@ export enum WebsocketCloseCodeEnum {
 /**
  * @description A lavalink op that sent by client. note: `volume` op is deprecated.
  */
-export type WebsocketOp = 'seek' | 'volume' | 'filters' | 'destroy' | 'playerUpdate' | 'stats';
+export type WebsocketOp = 'seek' | 'volume' | 'filters' | 'destroy' | 'playerUpdate' | 'stats' | 'configureResuming';
 
 /**
  * @description A lavalink op that sent by client. note: `volume` op is deprecated.
@@ -105,7 +125,8 @@ export enum WebsocketOpEnum {
 	FILTERS = 'filters',
 	DESTROY = 'destroy',
 	PLAYER_UPDATE = 'playerUpdate',
-	STATS = 'stats'
+	STATS = 'stats',
+	CONFIGURE_RESUMING = 'configureResuming'
 }
 
 /**
@@ -298,4 +319,41 @@ export interface DistortionEqualizer {
  */
 export interface LowPassEqualizer {
 	smoothing: number;
+}
+
+/**
+ * @description Routeplanner class.
+ */
+export type RoutePlannerClass = "RotatingNanoIpRoutePlanner";
+
+/**
+ * @description Routeplanner class.
+ */
+export enum RoutePlannerClassEnum {
+	ROTATING_NANO_IP_ROUTE_PLANNER = "RotatingNanoIpRoutePlanner"
+}
+
+/**
+ * @description IpBlockType.
+ */
+export type IpBlockType = "Inet6Address" | "Inet4Address";
+
+/**
+ * @description RouteplannerStatus sent by lavalink.
+ */
+export interface RoutePlannerStatusResponse {
+	class: RoutePlannerClass;
+	details: {
+		ipBlock: {
+			type: IpBlockType;
+			size: number;
+		},
+		failingAddresses: {
+			address: string;
+			failingTimestamp: number;
+			failingTime: string;
+		}[];
+		blockIndex: number;
+		currentAddressIndex: string;
+	}
 }
