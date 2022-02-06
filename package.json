@@ -1,17 +1,17 @@
 {
-  "name": "kirishima-template",
+  "name": "lavalink-api-types",
   "author": {
     "name": "KagChi"
   },
   "version": "0.1.0",
   "license": "GPL-3.0",
   "repository": {
-    "url": "https://github.com/kirishima-ship/kirishima-template"
+    "url": "https://github.com/kirishima-ship/lavalink-api-types"
   },
   "bugs": {
-    "url": "https://github.com/kirishima-ship/kirishima-template/issues"
+    "url": "https://github.com/kirishima-ship/lavalink-api-types/issues"
   },
-  "readme": "https://github.com/kirishima-ship/kirishima-template/blob/main/README.md",
+  "readme": "https://github.com/kirishima-ship/lavalink-api-types/blob/main/README.md",
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=7.0.0"
