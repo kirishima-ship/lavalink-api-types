@@ -1,3 +1,14 @@
+export type LavalinkSource = 'youtube' | 'soundcloud' | 'bandcamp' | 'local' | 'vimeo' | 'twitch' | string;
+
+export enum LavalinkSourceEnum {
+	Youtube = 'youtube',
+	Soundcloud = 'soundcloud',
+	Bandcamp = 'bandcamp',
+	Local = 'local',
+	Vimeo = 'vimeo',
+	Twitch = 'twitch'
+}
+
 /**
  * @description A lavalink severity level when there's an error
  */
@@ -111,7 +122,7 @@ export interface LavalinkTrack {
 		position: number;
 		title: string;
 		uri: string;
-		sourceName: 'youtube' | 'soundcloud' | 'bandcamp' | 'local' | 'vimeo' | 'twitch' | string;
+		sourceName: LavalinkSource;
 	};
 }
 
