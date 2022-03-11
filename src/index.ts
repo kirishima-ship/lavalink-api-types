@@ -126,7 +126,8 @@ export enum WebsocketOpEnum {
 	DESTROY = 'destroy',
 	PLAYER_UPDATE = 'playerUpdate',
 	STATS = 'stats',
-	CONFIGURE_RESUMING = 'configureResuming'
+	CONFIGURE_RESUMING = 'configureResuming',
+	VOICE_UPDATE= 'voiceUpdate'
 }
 
 /**
