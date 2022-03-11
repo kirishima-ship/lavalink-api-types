@@ -114,7 +114,7 @@ export enum WebsocketCloseCodeEnum {
 /**
  * @description A lavalink op that sent by client. note: `volume` op is deprecated.
  */
-export type WebsocketOp = 'seek' | 'volume' | 'filters' | 'destroy' | 'playerUpdate' | 'stats' | 'configureResuming';
+export type WebsocketOp = 'seek' | 'volume' | 'filters' | 'destroy' | 'playerUpdate' | 'stats' | 'configureResuming' | 'voiceUpdate';
 
 /**
  * @description A lavalink op that sent by client. note: `volume` op is deprecated.
@@ -127,7 +127,7 @@ export enum WebsocketOpEnum {
 	PLAYER_UPDATE = 'playerUpdate',
 	STATS = 'stats',
 	CONFIGURE_RESUMING = 'configureResuming',
-	VOICE_UPDATE= 'voiceUpdate'
+	VOICE_UPDATE = 'voiceUpdate'
 }
 
 /**
