@@ -310,11 +310,26 @@ export interface RotationEqualizer {
  * @description Distortion filter payload.
  */
 export interface DistortionEqualizer {
+	sinOffset: number;
+	sinScale: number;
+	cosOffset: number;
+	cosScale: number;
+	tanOffset: number;
+	tanScale: number;
+	offset: number;
+	scale: number;
+}
+
+/**
+ * @description channelMix filter payload.
+ */
+export interface ChannelMixEqualizer {
 	leftToLeft: number;
 	leftToRight: number;
 	rightToRight: number;
 	rightToLeft: number;
 }
+
 
 /**
  * @description Lowpass filter payload.
