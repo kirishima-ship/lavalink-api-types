@@ -114,14 +114,26 @@ export enum WebsocketCloseCodeEnum {
 /**
  * @description A lavalink op that sent by client. note: `volume` op is deprecated.
  */
-export type WebsocketOp = 'play' | 'seek' | 'volume' | 'filters' | 'destroy' | 'playerUpdate' | 'stats' | 'configureResuming' | 'voiceUpdate';
+export type WebsocketOp =
+	| 'stop'
+	| 'play'
+	| 'seek'
+	| 'volume'
+	| 'filters'
+	| 'destroy'
+	| 'playerUpdate'
+	| 'stats'
+	| 'configureResuming'
+	| 'voiceUpdate';
 
 /**
  * @description A lavalink op that sent by client. note: `volume` op is deprecated.
  */
 export enum WebsocketOpEnum {
+	STOP = 'stop',
 	PLAY = 'play',
 	SEEK = 'seek',
+	/** @deprecated Will be removed on lavalink major update */
 	VOLUME = 'volume',
 	FILTERS = 'filters',
 	DESTROY = 'destroy',
@@ -329,7 +341,6 @@ export interface ChannelMixEqualizer {
 	rightToRight: number;
 	rightToLeft: number;
 }
-
 
 /**
  * @description Lowpass filter payload.
