@@ -62,12 +62,13 @@ export enum TrackEndReasonEnum {
 /**
  * @description A load type returned by lavalink in loadtracks route.
  */
-export type LoadType = 'TRACK_LOADED' | 'PLAYLIST_LOADED' | 'NO_MATCHES' | 'LOAD_FAILED';
+export type LoadType = 'SEARCH_RESULT ' | 'TRACK_LOADED' | 'PLAYLIST_LOADED' | 'NO_MATCHES' | 'LOAD_FAILED';
 
 /**
  * @description A load type returned by lavalink in loadtracks route.
  */
 export enum LoadTypeEnum {
+	SEARCH_RESULT = 'SEARCH_RESULT',
 	TRACK_LOADED = 'TRACK_LOADED',
 	PLAYLIST_LOADED = 'PLAYLIST_LOADED',
 	NO_MATCHES = 'NO_MATCHES',
