@@ -3,15 +3,15 @@
   "author": {
     "name": "KagChi"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist",
+  "module": "dist",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "import": "./dist",
+      "require": "./dist"
     }
   },
-  "version": "0.1.9",
+  "version": "1.0.0",
   "license": "GPL-3.0",
   "repository": {
     "url": "https://github.com/kirishima-ship/lavalink-api-types"
