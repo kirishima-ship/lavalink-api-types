@@ -104,3 +104,11 @@ export enum TrackEndReasonEnum {
 export enum RoutePlannerClassEnum {
 	ROTATING_NANO_IP_ROUTE_PLANNER = 'RotatingNanoIpRoutePlanner'
 }
+
+/**
+ * @description IpBlockType.
+ */
+export enum IpBlockTypeEnum {
+	I_NET_6_ADDRESS = 'Inet6Address',
+	I_NET_4_ADDRESS = 'Inet4Address'
+}

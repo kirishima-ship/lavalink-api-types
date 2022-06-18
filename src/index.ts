@@ -1,4 +1,12 @@
-import type { WebsocketOpEnum, WebSocketTypeEnum } from './enums';
+import type {
+	IpBlockTypeEnum,
+	LavalinkSourceEnum,
+	LoadTypeEnum,
+	SeverityEnum,
+	WebsocketCloseCodeEnum,
+	WebsocketOpEnum,
+	WebSocketTypeEnum
+} from './enums';
 import type { LavalinkSource, LoadType, Severity, WebSocketType, TrackEndReason, WebsocketCloseCode } from './types';
 
 /**
@@ -15,7 +23,7 @@ export interface LavalinkTrack {
 		position: number;
 		title: string;
 		uri: string;
-		sourceName: LavalinkSource;
+		sourceName: LavalinkSource | LavalinkSourceEnum;
 	};
 }
 
@@ -23,7 +31,7 @@ export interface LavalinkTrack {
  * @description Lavalink response when calling loadtracks route.
  */
 export interface LoadTrackResponse {
-	loadType: LoadType;
+	loadType: LoadType | LoadTypeEnum;
 	playlistInfo?: { name: string; selectedTrack: number };
 	tracks: LavalinkTrack[];
 	exception?: Omit<Exception, 'cause'>;
@@ -68,7 +76,7 @@ export interface LavalinkStatsPayload {
  * @description Lavalink exception object.
  */
 export interface Exception {
-	severity: Severity;
+	severity: Severity | SeverityEnum;
 	message: string;
 	cause: string;
 }
@@ -78,7 +86,7 @@ export interface Exception {
  */
 export interface LavalinkPlayerPayload {
 	op: 'event';
-	type: WebSocketType;
+	type: WebSocketType | WebSocketTypeEnum;
 	guildId: string;
 }
 
@@ -121,7 +129,7 @@ export interface TrackStuckEventPayload extends LavalinkPlayerPayload {
  */
 export interface WebSocketClosedEventPayload extends LavalinkPlayerPayload {
 	type: WebSocketTypeEnum.WebSocketClosedEvent;
-	code: WebsocketCloseCode;
+	code: WebsocketCloseCode | WebsocketCloseCodeEnum | number;
 	byRemote: boolean;
 	reason: string;
 }
@@ -224,7 +232,7 @@ export interface RoutePlannerStatusResponse {
 	class: RoutePlannerClass;
 	details: {
 		ipBlock: {
-			type: IpBlockType;
+			type: IpBlockType | IpBlockTypeEnum;
 			size: number;
 		};
 		failingAddresses: {
@@ -236,3 +244,6 @@ export interface RoutePlannerStatusResponse {
 		currentAddressIndex: string;
 	};
 }
+
+export * from './enums/index';
+export * from './types/index';
