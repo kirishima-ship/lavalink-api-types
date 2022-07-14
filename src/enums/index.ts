@@ -77,7 +77,6 @@ export enum WebsocketOpEnum {
 	STOP = 'stop',
 	PLAY = 'play',
 	SEEK = 'seek',
-	/** @deprecated Will be removed on lavalink major update */
 	VOLUME = 'volume',
 	FILTERS = 'filters',
 	DESTROY = 'destroy',
