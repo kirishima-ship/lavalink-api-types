@@ -34,7 +34,7 @@ export type WebSocketType = 'WebSocketClosedEvent' | 'TrackStartEvent' | 'TrackE
 export type WebsocketCloseCode = 4006 | 4001 | 4002 | 4003 | 4004 | 4005 | 4006 | 4009 | 4011 | 4012 | 4014 | 4015 | 4016;
 
 /**
- * @description A lavalink op that sent by client. note: `volume` op is deprecated.
+ * @description A lavalink op that sent by client.
  */
 export type WebsocketOp =
 	| 'pause'
