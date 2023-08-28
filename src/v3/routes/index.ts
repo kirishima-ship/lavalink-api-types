@@ -4,41 +4,45 @@ export const Routes = {
 	 * - GET /loadtracks
 	 */
     loadTracks(identifier: string) {
-        return `/loadtracks?identifier=${identifier}` as const;
+        return `/v3/loadtracks?identifier=${identifier}` as const;
     },
     /**
 	 * Route for:
 	 * - GET /decodetrack
 	 */
     decodeTrack(track: string) {
-        return `/decodetrack?track=${track}` as const;
+        return `/v3/decodetrack?track=${track}` as const;
     },
     /**
 	 * Route for:
 	 * - POST /decodetracks
 	 */
     decodeTracks() {
-        return "/decodetracks" as const;
+        return "/v3/decodetracks" as const;
     },
     /**
 	 * Route for:
 	 * - GET /routeplanner/status
 	 */
     routePlannerStatus() {
-        return "/routeplanner/status" as const;
+        return "/v3/routeplanner/status" as const;
     },
     /**
 	 * Route for:
 	 * - POST /routeplanner/free/address
 	 */
     routePlannerFreeAddress() {
-        return "/routeplanner/free/address" as const;
+        return "/v3/routeplanner/free/address" as const;
     },
     /**
 	 * Route for:
 	 * - POST /routeplanner/free/all
 	 */
     routePlannerFreeAll() {
-        return "/routeplanner/free/all" as const;
+        return "/v3/routeplanner/free/all" as const;
+    },
+
+    version() {
+        return "/version" as const;
     }
 };
