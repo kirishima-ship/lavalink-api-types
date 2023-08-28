@@ -1,4 +1,5 @@
-import { LavalinkSource, LoadType, Severity, WebSocketType, TrackEndReason, WebsocketCloseCode, IpBlockType, WebsocketOp, RoutePlannerClass } from "./types/index";
+import { IpBlockType, LavalinkSource, RoutePlannerClass, WebSocketType, WebsocketCloseCode } from "../common";
+import { LoadType, Severity, TrackEndReason, WebsocketOp } from "./types/index";
 
 /**
  * @description Lavalink track object.
@@ -145,6 +146,7 @@ export interface RoutePlannerStatusResponse {
     };
 }
 
+export * from "../common";
 export * from "./types/index";
 export * from "./types/index";
 export * from "./routes/index";

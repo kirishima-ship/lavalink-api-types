@@ -2,9 +2,11 @@
     "compilerOptions": {
         "target": "ES2022",
         "module": "commonjs",
-        "moduleResolution": "Node",
-        "lib": ["ES2022"],
-        "strict": true,
+        "lib": ["esnext"],
+        "strict": false,
+        "removeComments": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
@@ -14,7 +16,7 @@
         "importHelpers": false,
         "resolveJsonModule": true,
         "strictNullChecks": true,
-        "typeRoots": ["node_modules/@types", "src/typings"],
+        "typeRoots": ["node_modules/@types"],
         "declaration": true,
         "declarationMap": true,
 		"outDir": "dist"
