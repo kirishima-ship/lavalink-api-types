@@ -64,7 +64,7 @@ export enum WebsocketCloseCode {
     SessionTimeout = 4009,
     ServerNotFound = 4011,
     UnknownProtocol = 4012,
-    DISCONNECTED = 4014,
+    Disconnected = 4014,
     VoiceServerCrashed = 4015,
     UnknownEncryptionMode = 4016
 }
