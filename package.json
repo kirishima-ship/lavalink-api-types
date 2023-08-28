@@ -7,9 +7,16 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./v3": {
+      "types": "./dist/v3/index.d.ts",
+      "import": "./dist/v3/index.mjs",
+      "require": "./dist/v3/index.js"
+    }
   },
   "version": "1.1.5",
   "license": "GPL-3.0",
@@ -25,7 +32,8 @@
     "npm": ">=7.0.0"
   },
   "scripts": {
-    "build": "rimraf dist && tsc && gen-esm-wrapper dist/index.js dist/index.mjs",
+    "build": "rimraf dist && tsc && pnpm run build:esm",
+    "build:esm": "gen-esm-wrapper dist/index.js dist/index.mjs && gen-esm-wrapper dist/v3/index.js dist/v3/index.mjs",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },
