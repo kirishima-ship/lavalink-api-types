@@ -22,6 +22,6 @@ jobs:
         run: pnpm run build
       - name: Publish source
         run: |
-          pnpm publish --no-git-checks --access public || true
+          pnpm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN} && pnpm publish --no-git-checks --access public || true
         env:
           NPM_TOKEN: '${{ secrets.NPM_TOKEN }}'
