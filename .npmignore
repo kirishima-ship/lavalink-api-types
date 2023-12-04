@@ -9,3 +9,4 @@ tsconfig.tsbuildinfo
 .gitignore
 .gitattributes
 .eslintrc
+.node-version
