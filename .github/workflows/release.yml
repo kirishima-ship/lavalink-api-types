@@ -4,5 +4,5 @@ on:
       - published
 jobs:
   release:
-    uses: nezuchan/workflows/.github/workflows/npm-release.yml@main
+    uses: kirishima-ship/workflows/.github/workflows/npm-release.yml@main
     secrets: inherit
