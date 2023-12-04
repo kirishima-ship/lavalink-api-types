@@ -1,12 +1,10 @@
-
-
 /**
  * @description A lavalink severity level when there's an error
  */
 export enum Severity {
     Common = "common",
     Suspicious = "suspicious",
-    Fault = "failt"
+    Fault = "fault"
 }
 
 /**
@@ -29,4 +27,11 @@ export enum TrackEndReason {
     Stopped = "stopped",
     Replaced = "replaced",
     Cleanup = "cleanup"
+}
+
+export enum WebSocketOp {
+    Ready = "ready",
+    PlayerUpdate = "playerUpdate",
+    Stats = "stats",
+    Event = "event"
 }

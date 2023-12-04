@@ -21,7 +21,7 @@ export enum LoadType {
 /**
  * @description A lavalink op that sent by client.
  */
-export enum WebsocketOp {
+export enum WebSocketOp {
     Pause = "pause",
     Stop = "stop",
     Play = "play",

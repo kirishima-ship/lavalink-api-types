@@ -78,3 +78,17 @@ export interface ChannelMixEqualizer {
 export interface LowPassEqualizer {
     smoothing: number;
 }
+
+export interface Filters {
+    volume?: number;
+    equalizer?: Equalizer[];
+    karaoke?: KaraokeEqualizer;
+    timescale?: TimeScaleEqualizer;
+    tremolo?: TremoloEqualizer;
+    vibrato?: VibratoEqualizer;
+    rotation?: RotationEqualizer;
+    distortion?: DistortionEqualizer;
+    channelMix?: ChannelMixEqualizer;
+    lowPass?: LowPassEqualizer;
+    pluginFilters?: Record<string, unknown>;
+}

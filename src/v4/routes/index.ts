@@ -48,7 +48,43 @@ export const Routes = {
     websocket() {
         return "/v4/websocket" as const;
     },
-
+    /**
+	 * Route for:
+	 * - GET /v4/sessions/sessionId/players
+	 */
+    players(sessionId: string) {
+        return `/v4/sessions/${sessionId}/players` as const;
+    },
+    /**
+	 * Route for:
+	 * - POST /v4/sessions/{sessionId}/players/{guildId}
+     * - PATCH /v4/sessions/{sessionId}/players/{guildId}?noReplace={boolean}
+     * - DELETE /v4/sessions/{sessionId}/players/{guildId}
+	 */
+    player(sessionId: string, guildId: string, noReplace?: boolean) {
+        return `/v4/sessions/${sessionId}/players/${guildId}${typeof noReplace === "boolean" ? `?noReplace=${noReplace}` : ""}` as const;
+    },
+    /**
+	 * Route for:
+     * - PATCH /v4/sessions/{sessionId}
+	 */
+    session(sessionId: string) {
+        return `/v4/sessions/${sessionId}` as const;
+    },
+    /**
+	 * Route for:
+	 * - GET /v4/version
+	 */
+    info() {
+        return "/v4/info" as const;
+    },
+    /**
+	 * Route for:
+	 * - GET /v4/stats
+	 */
+    stats() {
+        return "/v4/stats" as const;
+    },
     /**
 	 * Route for:
 	 * - GET /version

@@ -68,3 +68,9 @@ export enum IpBlockType {
     INet6Address = "Inet6Address",
     INet4Address = "Inet4Address"
 }
+
+export interface VoiceState {
+    token: string;
+    endpoint: string;
+    sessionId: string;
+}

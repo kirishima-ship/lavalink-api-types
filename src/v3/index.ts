@@ -1,5 +1,5 @@
 import { IpBlockType, LavalinkSource, RoutePlannerClass, WebSocketType, WebsocketCloseCode } from "../common";
-import { LoadType, Severity, TrackEndReason, WebsocketOp } from "./types/index";
+import { LoadType, Severity, TrackEndReason, WebSocketOp } from "./types/index";
 
 /**
  * @description Lavalink track object.
@@ -33,7 +33,7 @@ export interface LoadTrackResponse {
  * @description Lavalink response when PlayerUpdate event received.
  */
 export interface PlayerUpdatePayload {
-    op: WebsocketOp.PlayerUpdate;
+    op: WebSocketOp.PlayerUpdate;
     guildId: string;
     state: {
         time: number;
@@ -46,7 +46,7 @@ export interface PlayerUpdatePayload {
  * @description lavalink stats payload sent by lavalink.
  */
 export interface LavalinkStatsPayload {
-    op: WebsocketOp.Stats;
+    op: WebSocketOp.Stats;
     players: number;
     playingPlayers: number;
     uptime: number;
