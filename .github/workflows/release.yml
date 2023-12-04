@@ -17,11 +17,11 @@ jobs:
         with:
           node-version-file: .node-version
       - name: Installing dependencies
-        run: npm install
+        run: pnpm install
       - name: Compile source
-        run: npm run build
+        run: pnpm run build
       - name: Publish source
         run: |
-          npm publish --no-git-checks --access public || true
+          pnpm publish --no-git-checks --access public || true
         env:
           NODE_AUTH_TOKEN: '${{ secrets.NPM_TOKEN }}'
