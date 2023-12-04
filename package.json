@@ -17,6 +17,16 @@
       "import": "./dist/v3/index.mjs",
       "require": "./dist/v3/index.js"
     },
+    "./v4": {
+      "types": "./dist/v4/index.d.ts",
+      "import": "./dist/v4/index.mjs",
+      "require": "./dist/v4/index.js"
+    },
+    "./equalizer": {
+      "types": "./dist/equalizer.d.ts",
+      "import": "./dist/equalizer.mjs",
+      "require": "./dist/equalizer.js"
+    },
     "./common": {
       "types": "./dist/common.d.ts",
       "import": "./dist/common.mjs",
@@ -33,12 +43,12 @@
   },
   "readme": "https://github.com/kirishima-ship/lavalink-api-types/blob/main/README.md",
   "engines": {
-    "node": ">=16.0.0",
+    "node": ">=20.0.0",
     "npm": ">=7.0.0"
   },
   "scripts": {
     "build": "rimraf dist && tsc && pnpm run build:esm",
-    "build:esm": "gen-esm-wrapper dist/index.js dist/index.mjs && gen-esm-wrapper dist/v3/index.js dist/v3/index.mjs && gen-esm-wrapper dist/common.js dist/common.mjs",
+    "build:esm": "gen-esm-wrapper dist/index.js dist/index.mjs && gen-esm-wrapper dist/v3/index.js dist/v3/index.mjs && gen-esm-wrapper dist/common.js dist/common.mjs && gen-esm-wrapper dist/equalizer.js dist/equalizer.mjs",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },
