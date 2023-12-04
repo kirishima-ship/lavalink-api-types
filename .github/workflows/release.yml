@@ -4,24 +4,5 @@ on:
       - published
 jobs:
   release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3
-      - name: Setup pnpm
-        uses: pnpm/action-setup@d882d12c64e032187b2edb46d3a0d003b7a43598 # v2.4.0
-        with:
-          version: latest
-      - name: Setup Node.js
-        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3
-        with:
-          node-version-file: .node-version
-      - name: Installing dependencies
-        run: pnpm install
-      - name: Compile source
-        run: pnpm run build
-      - name: Publish source
-        run: |
-          pnpm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN} && pnpm publish --no-git-checks --access public || true
-        env:
-          NPM_TOKEN: '${{ secrets.NPM_TOKEN }}'
+    uses: nezuchan/workflows/.github/workflows/npm-release.yml@main
+    secrets: inherit
