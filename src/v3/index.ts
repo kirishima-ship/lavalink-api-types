@@ -148,5 +148,4 @@ export interface RoutePlannerStatusResponse {
 
 export * from "../common";
 export * from "./types/index";
-export * from "./types/index";
 export * from "./routes/index";

@@ -191,5 +191,6 @@ export interface WebSocketClosedEventPayload extends EventPayload {
     byRemote: boolean;
 }
 
+export * from "./types";
 export * from "./routes";
 export * from "../common";
