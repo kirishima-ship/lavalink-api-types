@@ -33,7 +33,7 @@
       "require": "./dist/common.js"
     }
   },
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "GPL-3.0",
   "repository": {
     "url": "https://github.com/kirishima-ship/lavalink-api-types"
