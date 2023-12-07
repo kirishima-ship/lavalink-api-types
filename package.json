@@ -48,7 +48,7 @@
   },
   "scripts": {
     "build": "rimraf dist && tsc && pnpm run build:esm",
-    "build:esm": "gen-esm-wrapper dist/index.js dist/index.mjs && gen-esm-wrapper dist/v3/index.js dist/v3/index.mjs && gen-esm-wrapper dist/common.js dist/common.mjs && gen-esm-wrapper dist/equalizer.js dist/equalizer.mjs",
+    "build:esm": "gen-esm-wrapper dist/index.js dist/index.mjs && gen-esm-wrapper dist/v3/index.js dist/v3/index.mjs && gen-esm-wrapper dist/v4/index.js dist/v4/index.mjs && gen-esm-wrapper dist/common.js dist/common.mjs && gen-esm-wrapper dist/equalizer.js dist/equalizer.mjs",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },
